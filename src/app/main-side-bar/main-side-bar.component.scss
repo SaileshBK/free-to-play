@@ -1,0 +1,47 @@
+.side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 250px;
+  background-color: #f5f5f5;
+  transition: all 0.3s;
+  margin-top: 60px;
+}
+
+.side-bar.collapsed {
+  width: 50px;
+}
+
+.toggle-button {
+  position: absolute;
+  right: -45px;
+  display: block;
+  background: transparent;
+  border: none;
+}
+
+.side-bar.collapsed .toggle-button {
+  display: block;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s;
+}
+
+ul.collapsed {
+  display: none;
+}
+
+li {
+  padding: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+}

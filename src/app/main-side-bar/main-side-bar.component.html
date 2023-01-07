@@ -1,0 +1,11 @@
+<div class="side-bar" [ngClass]="{ 'collapsed': !isVisible }">
+  <button (click)="toggleSideBar()" class="toggle-button">
+    <i class='bx bx-menu bx-burst bx-md' style='color:#459ff8'></i>
+  </button>
+  <ul [ngClass]="{ 'collapsed': !isVisible }">
+    <li *ngFor="let item of menuItems" [ngClass]="{ 'active': item.route === activeRoute }">
+      <a [routerLink]="item.route" (click)="setActiveRoute(item.route)">{{ item.label }}</a>
+    </li>
+  </ul>
+  <ng-content></ng-content>
+</div>
