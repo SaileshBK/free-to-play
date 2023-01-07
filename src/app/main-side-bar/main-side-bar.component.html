@@ -4,7 +4,9 @@
   </button>
   <ul [ngClass]="{ 'collapsed': !isVisible }">
     <li *ngFor="let item of menuItems" [ngClass]="{ 'active': item.route === activeRoute }">
-      <a [routerLink]="item.route" (click)="setActiveRoute(item.route)">{{ item.label }}</a>
+      <button>
+        <a [routerLink]="item.route" (click)="setActiveRoute(item.route)">{{ item.label }}</a>
+      </button>
     </li>
   </ul>
   <ng-content></ng-content>
